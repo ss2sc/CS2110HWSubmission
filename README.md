@@ -28,8 +28,10 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
 ## Writing Angular
-# To generate a component
-Run `ng generate component`
-
 # Dependencies that need to be installed
 Bootstrap: `npm install bootstrap`
+
+
+## TODO
+Routing: Temp routing for now while we just make the pages
+Users: Currently very simple way to differentiate user and instructor experiences

@@ -1,1 +1,9 @@
-<p>home works!</p>
+<!-- Student Experience -->
+<div *ngIf="!this.globals.isInstructor">
+    <p>Student Home Page</p>
+</div>
+
+<!-- Instructor Experience -->
+<div *ngIf="this.globals.isInstructor">
+    <p>Instructor Home Page</p>
+</div>

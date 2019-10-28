@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GlobalsService } from '../common/services/globals.service'
 
 @Component({
   selector: 'app-login',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  constructor(private globals: GlobalsService) { }
 
   ngOnInit() {
   }
 
+  setInstructor(isInstructor:boolean) {
+    this.globals.isInstructor = isInstructor;
+  }
 }
