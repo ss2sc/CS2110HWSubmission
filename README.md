@@ -1,4 +1,5 @@
-# Doriyah
+# Doriyah (Real name TBD)
+CS2110 Assignment Submission Redesign
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.5.
 
@@ -28,7 +29,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Writing Angular
 # To generate a component
-Run `ng generate component 
+Run `ng generate component`
 
 # Dependencies that need to be installed
 Bootstrap: `npm install bootstrap`
