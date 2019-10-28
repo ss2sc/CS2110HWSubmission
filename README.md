@@ -34,4 +34,4 @@ Bootstrap: `npm install bootstrap`
 
 ## TODO
 Routing: Temp routing for now while we just make the pages
-Users: Currently very simple way to differentiate user and instructor experiences
+Users: Currently very simple way to differentiate student and instructor experiences
