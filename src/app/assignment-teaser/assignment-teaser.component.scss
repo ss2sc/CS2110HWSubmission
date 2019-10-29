@@ -1,0 +1,35 @@
+.AssignmentTeaser {
+
+    &--student {
+        margin-bottom: 32px;
+        border: 1px solid;
+
+        .AssignmentTeaser-title {
+            padding: 8px 16px;
+            margin-bottom: 16px;
+            display: block;
+            color: black;
+            font-size: 24px;
+            font-weight: 600;
+            background-color: gray;
+        }
+    }
+    
+    &--instructor {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    
+        padding: 8px 16px;
+    }
+
+    &-description,
+    &-grade {
+        padding: 0 16px;
+    }
+
+    &-modify {
+        padding: 8px;
+        background-color: silver;
+    }
+}

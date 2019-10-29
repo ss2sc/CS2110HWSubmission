@@ -1,0 +1,17 @@
+.Home {
+    margin: 32px;
+
+    &-title,
+    &-grade {
+        text-align: center;
+    }
+
+    &-subtitle {
+        font-size: 36px;
+        text-decoration: underline;
+    }
+
+    &-assignments {
+        margin: 16px;
+    }
+}

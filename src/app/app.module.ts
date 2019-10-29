@@ -7,7 +7,9 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
 import { FooterComponent } from './footer/footer.component';
-import { GlobalsService } from './common/services/globals.service'
+import { GlobalsService } from './common/services/globals.service';
+import { AssignmentTeaserComponent } from './assignment-teaser/assignment-teaser.component';
+import { CourseTeaserComponent } from './course-teaser/course-teaser.component'
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { GlobalsService } from './common/services/globals.service'
     HomeComponent,
     LoginComponent,
     ToolbarComponent,
-    FooterComponent
+    FooterComponent,
+    AssignmentTeaserComponent,
+    CourseTeaserComponent
   ],
   imports: [
     BrowserModule,
