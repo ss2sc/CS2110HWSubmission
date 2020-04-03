@@ -10,7 +10,7 @@ describe('workspace-project App', () => {
 
   it('should display welcome message', () => {
     page.navigateTo();
-    expect(page.getTitleText()).toEqual('Doriyah app is running!');
+    expect(page.getTitleText()).toEqual('CS2110HWSubmission app is running!');
   });
 
   afterEach(async () => {

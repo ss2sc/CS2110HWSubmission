@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { GlobalsService } from '../common/services/globals.service'
+import { GlobalsService } from '../common/services/globals.service';
+import DummyData from '../../assets/dummydata.json';
 
 @Component({
   selector: 'app-login',
@@ -13,7 +14,7 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
   }
 
-  setInstructor(isInstructor:boolean) {
-    this.globals.isInstructor = isInstructor;
+  login(userType: string) {
+    this.globals.user = userType;
   }
 }

@@ -1,0 +1,33 @@
+{
+    "version": 1,
+    "users": {
+        "professor": {
+            "firstName": "the",
+            "lastName": "professor"
+        },
+        "instructor": {
+            "firstName": "teaching",
+            "lastName": "boi"
+        },
+        "student": {
+            "firstName": "learning",
+            "lastName": "boi"
+        }
+    },
+    "classes": {
+        "cs2110": {
+            "assignments": {
+                "HW1": {
+                    "title": "Homework 1: CodingBat",
+                    "description": "Get used to Java with CodingBat!",
+                    "grade": 0
+                },
+                "HW2": {
+                    "title": "Instagram?",
+                    "description": "Start building your new startup product!",
+                    "grade": 0
+                }
+            }
+        }
+    }
+}

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import DummyData from '../assets/dummydata.json';
 
 @Component({
   selector: 'app-root',
@@ -6,6 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'Doriyah';
-  isInstructor = false;
+  title = 'CS2110HWSubmission';
+  
+  constructor() {
+    console.log(DummyData);
+  }
 }

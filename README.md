@@ -1,4 +1,4 @@
-# Doriyah (Real name TBD)
+# CS2110HWSubmission (Real name TBD)
 CS2110 Assignment Submission Redesign
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.5.

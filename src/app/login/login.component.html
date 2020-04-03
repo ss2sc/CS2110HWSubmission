@@ -1,4 +1,5 @@
 <div class="container">
-    <div role="button" class="login-button" (click)="setInstructor(false)" routerLink="/home">Login as Student</div>
-    <div role="button" class="login-button" (click)="setInstructor(true)" routerLink="/home">Login as Instructor</div>
+    <div role="button" class="login-button" (click)="login('student')" routerLink="/home">Login as Student</div>
+    <div role="button" class="login-button" (click)="login('instructor')" routerLink="/home">Login as Instructor</div>
+    <div role="button" class="login-button" (click)="login('professor')" routerLink="/home">Login as Professor</div>
 </div>

@@ -5,6 +5,6 @@ import { Injectable } from '@angular/core';
 })
 export class GlobalsService {
 
-  isInstructor: boolean = true;
+  user: string = "";
   constructor() { }
 }

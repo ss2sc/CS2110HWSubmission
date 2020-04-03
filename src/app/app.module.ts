@@ -9,7 +9,9 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { GlobalsService } from './common/services/globals.service';
 import { AssignmentTeaserComponent } from './assignment-teaser/assignment-teaser.component';
-import { CourseTeaserComponent } from './course-teaser/course-teaser.component'
+import { CourseTeaserComponent } from './course-teaser/course-teaser.component';
+import { CreateAssignmentComponent } from './create-assignment/create-assignment.component';
+import { ModifyAssignmentComponent } from './modify-assignment/modify-assignment.component'
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { CourseTeaserComponent } from './course-teaser/course-teaser.component'
     ToolbarComponent,
     FooterComponent,
     AssignmentTeaserComponent,
-    CourseTeaserComponent
+    CourseTeaserComponent,
+    CreateAssignmentComponent,
+    ModifyAssignmentComponent
   ],
   imports: [
     BrowserModule,
