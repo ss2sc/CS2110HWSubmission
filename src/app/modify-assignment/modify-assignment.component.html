@@ -1,1 +1,67 @@
-<p>modify-assignment works!</p>
+<div class="CreateAssign">
+    <div class="CreateAssign-title">
+        <h1>Create Assignment</h1>
+    </div>
+    <form>
+        <div class="form-group CreateAssign-formGroup">
+            <label for="assignmentName">Assignment Title</label>
+            <input type="text" class="form-control CreateAssign-input" id="assignmentName" value="{{title}}">
+        </div>
+        <div class="form-group CreateAssign-formGroup">
+            <label for="directions">Directions</label>
+            <textarea class="form-control CreateAssign-input" id="directions" rows="4" value="{{description}}"></textarea>
+        </div>
+        <div class="form-group CreateAssign-formGroup">
+            <label for="dueDate">Due Date</label>
+            <input type="date" class="form-control CreateAssign-input" id="dueDate" value="{{dueDate}}">
+        </div>
+        <div class="form-group CreateAssign-formGroup">
+            <label for="maxSubs">Maximum Submissions</label>
+            <input type="number" class="form-control CreateAssign-input" id="maxSubs" value="{{maxSubmissions}}">
+        </div>
+        <div class="form-group CreateAssign-formGroup">
+            <label for="rubric">Rubric</label>
+            <div class="CreateAssign-input">
+                <div class="CreateAssign-list" id="CreateAssign-rubric">
+                    <div class="CreateAssign-pointGroup" *ngFor="let item of this.rubric | keyvalue">
+                        <label for="rubricPoints1">Points</label>
+                        <input type="number" class="form-control CreateAssign-pointInput" id="rubricPoints1" value="{{item.value}}">
+                        <label for="description1">Description</label>
+                        <input type="text" class="form-control CreateAssign-input" id="description1" value="{{item.key}}">
+                    </div>
+                </div>
+                <button type="button" class="CreateAssign-addGroup" (click)="addRubric()">+ Add More</button>
+            </div>
+        </div>
+        <div class="form-group CreateAssign-formGroup">
+            <label for="files">Upload Assignment Files</label>
+            <input type="file" class="form-control CreateAssign-input CreateAssign-fileUpload" id="files">
+        </div>
+        <div class="form-group CreateAssign-formGroup">
+            <label for="tests">Upload Unit Tests</label>
+            <input type="file" class="form-control CreateAssign-input CreateAssign-fileUpload" id="tests">
+        </div>
+        <div class="form-group CreateAssign-formGroup">
+            <label for="latePenalty">Late Penalty</label>
+            <div class="CreateAssign-input">
+                <div class="CreateAssign-list" id="CreateAssign-penalty">
+                    <div class="CreateAssign-pointGroup" *ngFor="let item of this.penalties | keyvalue">
+                        <label for="latePoints1">Points</label>
+                        <input type="number" class="form-control CreateAssign-pointInput" id="latePoints1" value="{{item.value}}">
+                        <label for="time1">Time</label>
+                        <input type="test" class="form-control CreateAssign-input" id="time1" value="{{item.key}}">
+                    </div>
+                </div>
+                <button type="button" class="CreateAssign-addGroup" (click)="addPenalty()">+ Add More</button>
+            </div>
+        </div>
+        <div class="form-group CreateAssign-formGroup">
+            <label for="expectTests">Expecting JUnit Tests?</label>
+            <div *ngIf="this.hasTests; then checked else notChecked"></div>
+            <ng-template #checked><input type="checkbox" class="form-control CreateAssign-input" id="expectTests" checked></ng-template>
+            <ng-template #notChecked><input type="checkbox" class="form-control CreateAssign-input" id="expectTests"></ng-template>
+        </div>
+        
+        <button type="submit" class="btn btn-primary">Create Assignment</button>
+    </form>
+</div>

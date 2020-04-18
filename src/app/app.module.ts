@@ -27,7 +27,7 @@ import { ModifyAssignmentComponent } from './modify-assignment/modify-assignment
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [GlobalsService],
   bootstrap: [AppComponent]

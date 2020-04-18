@@ -1,0 +1,17 @@
+{
+    "version": 1,
+    "title": "Homework 1: Even Instagram Started Somewhere",
+    "description": "In this assignment you will be writing two classes that interact with each other.  This assignment has two parts:\n\nPart 1: Photo Class - Due Wednesday, February 5, by 11:30p.m.\nPart 2: Library Class - Due Wednesday, February 10, by 11:30p.m.\n\nYou will be submitting on Web-CAT (see assignment document for further details.) There is a 48-hour grace period for submitting, HOWEVER this comes with a penalty:\n- if you submit between 11:31pm on Friday, September 20 and 11:30pm on Saturday, September 21, we will apply a 10% penalty.\n- if you submit between 11:31pm on Saturday, September 21 and 11:30pm on Sunday, September 22, we will apply a further 10% penalty (for a total of 20% penalty.)\n- we will not accept any submissions after 11:30pm on Sunday, September 22    \n\nRead the instructions of the assignment carefully (attached) and let us know if you have any questions.",
+    "due-date": "2020-01-31",
+    "max-submissions": 15,
+    "rubric": {
+        "Finished Part 1": 30,
+        "Finished Part 2": 40,
+        "Design and Readability": 30
+    },
+    "late-policy": {
+        "1 day": -10,
+        "2 day": -20
+    },
+    "expecting-tests": true
+}

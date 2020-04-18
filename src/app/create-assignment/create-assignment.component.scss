@@ -1,0 +1,44 @@
+.CreateAssign {
+    margin: 32px;
+
+    &-title{
+        display: flex;
+        justify-content: center;
+    }
+
+    &-formGroup {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &-input {
+        width: 60%;
+    }
+
+    &-pointGroup {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 16px;
+    }
+
+    &-pointInput {
+        width: 10%;
+    }
+
+    &-list {
+        margin-bottom: 16px;
+    }
+
+    &-addGroup {
+        padding: 0;
+        color: blue;
+        text-decoration: underline;
+        border: none;
+        background-color: white;
+    }
+
+    &-fileUpload {
+        border: none;
+    }
+}

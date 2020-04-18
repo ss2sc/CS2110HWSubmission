@@ -1,1 +1,64 @@
-<p>create-assignment works!</p>
+<div class="CreateAssign">
+    <div class="CreateAssign-title">
+        <h1>Create Assignment</h1>
+    </div>
+    <form>
+        <div class="form-group CreateAssign-formGroup">
+            <label for="assignmentName">Assignment Title</label>
+            <input type="text" class="form-control CreateAssign-input" id="assignmentName" placeholder="Enter Assignment Name">
+        </div>
+        <div class="form-group CreateAssign-formGroup">
+            <label for="directions">Directions</label>
+            <textarea class="form-control CreateAssign-input" id="directions" rows="4"></textarea>
+        </div>
+        <div class="form-group CreateAssign-formGroup">
+            <label for="dueDate">Due Date</label>
+            <input type="date" class="form-control CreateAssign-input" id="dueDate">
+        </div>
+        <div class="form-group CreateAssign-formGroup">
+            <label for="maxSubs">Maximum Submissions</label>
+            <input type="number" class="form-control CreateAssign-input" id="maxSubs">
+        </div>
+        <div class="form-group CreateAssign-formGroup">
+            <label for="rubric">Rubric</label>
+            <div class="CreateAssign-input">
+                <div class="CreateAssign-list" id="CreateAssign-rubric">
+                    <div class="CreateAssign-pointGroup">
+                        <label for="rubricPoints1">Points</label>
+                        <input type="number" class="form-control CreateAssign-pointInput" id="rubricPoints1">
+                        <label for="description1">Description</label>
+                        <input type="text" class="form-control CreateAssign-input" id="description1">
+                    </div>
+                </div>
+                <button type="button" class="CreateAssign-addGroup" (click)="addRubric()">+ Add More</button>
+            </div>
+        </div>
+        <div class="form-group CreateAssign-formGroup">
+            <label for="files">Upload Assignment Files</label>
+            <input type="file" class="form-control CreateAssign-input CreateAssign-fileUpload" id="files">
+        </div>
+        <div class="form-group CreateAssign-formGroup">
+            <label for="tests">Upload Unit Tests</label>
+            <input type="file" class="form-control CreateAssign-input CreateAssign-fileUpload" id="tests">
+        </div>
+        <div class="form-group CreateAssign-formGroup">
+            <label for="latePenalty">Late Penalty</label>
+            <div class="CreateAssign-input">
+                <div class="CreateAssign-list" id="CreateAssign-penalty">
+                    <div class="CreateAssign-pointGroup">
+                        <label for="latePoints1">Points</label>
+                        <input type="number" class="form-control CreateAssign-pointInput" id="latePoints1">
+                        <label for="time1">Time</label>
+                        <input type="test" class="form-control CreateAssign-input" id="time1">
+                    </div>
+                </div>
+                <button type="button" class="CreateAssign-addGroup" (click)="addPenalty()">+ Add More</button>
+            </div>
+        </div>
+        <div class="form-group CreateAssign-formGroup">
+            <label for="expectTests">Expecting JUnit Tests?</label>
+            <input type="checkbox" class="form-control CreateAssign-input" id="expectTests">
+        </div>
+        <button type="submit" class="btn btn-primary">Create Assignment</button>
+    </form>
+</div>
