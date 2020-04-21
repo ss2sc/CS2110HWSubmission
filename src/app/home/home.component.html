@@ -5,41 +5,54 @@
         <h3 class="Home-grade">Your Current Homework Grade is: [Grade]</h3>
         <div class="Home-openAssignments">
             <p class="Home-subtitle">Open Assignments</p>
-            <assignment-teaser></assignment-teaser>
+            <assignment-teaser *ngFor="let assignment of currentAssignments(classes[1].assignments)"
+                [title]="assignment.title"
+                [description]="assignment.description"
+                [grade]="assignment.grade">
+            </assignment-teaser>
         </div>
         <div class="Home-pastAssignments">
             <p class="Home-subtitle">Past Assignments</p>
-            <assignment-teaser></assignment-teaser>
-            <assignment-teaser></assignment-teaser>
-            <assignment-teaser></assignment-teaser>
+            <assignment-teaser *ngFor="let assignment of pastAssignments(classes[1].assignments)"
+                [title]="assignment.title"
+                [description]="assignment.description"
+                [grade]="assignment.grade">
+            </assignment-teaser>
         </div>
     </div>
     
     <!-- Instructor Experience -->
     <div *ngIf="this.globals.user == 'instructor'">
         <h1 class="Home-title">Welcome {{ name }}</h1>
-        <div class="Home-currentCourse">
-            <p class="Home-subtitle">Current Course</p>
+        <div class="Home-courses">
+            
+        </div>
+        <!-- Debating between this split or just sorting by recently added, cause this will require some tracking of semesters -->
+        <!-- <div class="Home-currentCourse">
+            <p class="Home-subtitle">Current Courses</p>
             <course-teaser></course-teaser>
         </div>
         <div class="Home-pastCourses">
             <p class="Home-subtitle">Previous Courses</p>
             <course-teaser></course-teaser>
-            <course-teaser></course-teaser>
-        </div>
+        </div> -->
     </div>
 
     <!-- Professor Experience -->
     <div *ngIf="this.globals.user == 'professor'">
         <h1 class="Home-title">Welcome {{ name }}</h1>
-        <div class="Home-currentCourse">
-            <p class="Home-subtitle">Current Course</p>
+        <div class="Home-courses">
+
+        </div>
+        <!-- Debating between this split or just sorting by recently added, cause this will require some tracking of semesters -->
+        <!-- <div class="Home-currentCourse">
+            <p class="Home-subtitle">Current Courses</p>
             <course-teaser></course-teaser>
         </div>
         <div class="Home-pastCourses">
             <p class="Home-subtitle">Previous Courses</p>
             <course-teaser></course-teaser>
             <course-teaser></course-teaser>
-        </div>
+        </div> -->
     </div>
 </div>

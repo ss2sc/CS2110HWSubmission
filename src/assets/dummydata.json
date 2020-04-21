@@ -1,5 +1,4 @@
 {
-    "version": 1,
     "users": {
         "professor": {
             "firstName": "the",
@@ -14,20 +13,42 @@
             "lastName": "boi"
         }
     },
-    "classes": {
-        "cs2110": {
-            "assignments": {
-                "HW1": {
+    "classes": [
+        {
+            "courseTitle": "CS2110",
+            "semester": "Fall 2019",
+            "assignments": [
+                {
                     "title": "Homework 1: CodingBat",
                     "description": "Get used to Java with CodingBat!",
-                    "grade": 0
+                    "grade": 0,
+                    "dueDate": "2019-10-01"
                 },
-                "HW2": {
-                    "title": "Instagram?",
+                {
+                    "title": "Homework 2: Instagram?",
                     "description": "Start building your new startup product!",
-                    "grade": 0
+                    "grade": 0,
+                    "dueDate": "2019-10-28"
                 }
-            }
+            ]
+        },
+        {
+            "courseTitle": "CS2110",
+            "semester": "Spring 2020",
+            "assignments": [
+                {
+                    "title": "Homework 1: CodingBat",
+                    "description": "Get used to Java with CodingBat!",
+                    "grade": 0,
+                    "dueDate": "2020-04-01"
+                },
+                {
+                    "title": "Homework 2: Instagram?",
+                    "description": "Start building your new startup product!",
+                    "grade": 0,
+                    "dueDate": "2020-04-28"
+                }
+            ]
         }
-    }
+    ]
 }

@@ -1,10 +1,15 @@
 <div class="AssignmentTeaser">
-    <div class="AssignmentTeaser--student" *ngIf="!this.globals.isInstructor">
-        <a class="AssignmentTeaser-title">[Assignment Title]</a>
-        <p class="AssignmentTeaser-description">[Assignment Description]</p>
-        <p class="AssignmentTeaser-grade">Grade: [Assignment Grade]</p>
+    <div class="AssignmentTeaser--student" *ngIf="this.globals.user == 'student'">
+        <a class="AssignmentTeaser-title">{{ title }}</a>
+        <p class="AssignmentTeaser-description">{{ description }}</p>
+        <p class="AssignmentTeaser-grade">Grade: {{ grade }}</p>
     </div>
-    <div class="AssignmentTeaser--instructor" *ngIf="this.globals.isInstructor">
+    <div class="AssignmentTeaser--instructor" *ngIf="this.globals.user == 'instructor'">
+        <a class="AssignmentTeaser-title">[Assignment Title]</a>
+        <p class="AssignmentTeaser-averageGrade">[Average Grade]</p>
+        <p class="AssignmentTeaser-gradeDist">[Grade Distribution]</p>
+    </div>
+    <div class="AssignmentTeaser--instructor" *ngIf="this.globals.user == 'professor'">
         <a class="AssignmentTeaser-title">[Assignment Title]</a>
         <p class="AssignmentTeaser-averageGrade">[Average Grade]</p>
         <p class="AssignmentTeaser-gradeDist">[Grade Distribution]</p>
