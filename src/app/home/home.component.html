@@ -5,7 +5,7 @@
         <h3 class="Home-grade">Your Current Homework Grade is: [Grade]</h3>
         <div class="Home-openAssignments">
             <p class="Home-subtitle">Open Assignments</p>
-            <assignment-teaser *ngFor="let assignment of currentAssignments(classes[1].assignments)"
+            <assignment-teaser *ngFor="let assignment of currentAssignments(courses[1].assignments)"
                 [title]="assignment.title"
                 [description]="assignment.description"
                 [grade]="assignment.grade">
@@ -13,7 +13,7 @@
         </div>
         <div class="Home-pastAssignments">
             <p class="Home-subtitle">Past Assignments</p>
-            <assignment-teaser *ngFor="let assignment of pastAssignments(classes[1].assignments)"
+            <assignment-teaser *ngFor="let assignment of pastAssignments(courses[1].assignments)"
                 [title]="assignment.title"
                 [description]="assignment.description"
                 [grade]="assignment.grade">
@@ -24,8 +24,13 @@
     <!-- Instructor Experience -->
     <div *ngIf="this.globals.user == 'instructor'">
         <h1 class="Home-title">Welcome {{ name }}</h1>
-        <div class="Home-courses">
-            
+        <div class="Home-courses" *ngFor="let course of courses">
+            <a class="Home-courses-title">{{ course.courseTitle }} {{ course.semester }}</a>
+            <assignment-teaser *ngFor="let assignment of pastAssignments(course.assignments)"
+                [title]="assignment.title"
+                [description]="assignment.description"
+                [grade]="assignment.grade">
+            </assignment-teaser>
         </div>
         <!-- Debating between this split or just sorting by recently added, cause this will require some tracking of semesters -->
         <!-- <div class="Home-currentCourse">
@@ -41,8 +46,13 @@
     <!-- Professor Experience -->
     <div *ngIf="this.globals.user == 'professor'">
         <h1 class="Home-title">Welcome {{ name }}</h1>
-        <div class="Home-courses">
-
+        <div class="Home-courses" *ngFor="let course of courses">
+            <a class="Home-courses-title">{{ course.courseTitle }} {{ course.semester }}</a>
+            <assignment-teaser *ngFor="let assignment of pastAssignments(course.assignments)"
+                [title]="assignment.title"
+                [description]="assignment.description"
+                [grade]="assignment.grade">
+            </assignment-teaser>
         </div>
         <!-- Debating between this split or just sorting by recently added, cause this will require some tracking of semesters -->
         <!-- <div class="Home-currentCourse">

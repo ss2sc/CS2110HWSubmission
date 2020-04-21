@@ -10,7 +10,7 @@ import DummyData from '../../assets/dummydata.json';
 export class HomeComponent implements OnInit {
 
   name: string = DummyData.users[this.globals.user].firstName + DummyData.users[this.globals.user].lastName
-  classes: any[] = DummyData.classes;
+  courses: any[] = DummyData.courses;
 
   constructor(private globals: GlobalsService) { }
 

@@ -5,12 +5,12 @@
         <p class="AssignmentTeaser-grade">Grade: {{ grade }}</p>
     </div>
     <div class="AssignmentTeaser--instructor" *ngIf="this.globals.user == 'instructor'">
-        <a class="AssignmentTeaser-title">[Assignment Title]</a>
+        <a class="AssignmentTeaser-title">{{ title }}</a>
         <p class="AssignmentTeaser-averageGrade">[Average Grade]</p>
         <p class="AssignmentTeaser-gradeDist">[Grade Distribution]</p>
     </div>
     <div class="AssignmentTeaser--instructor" *ngIf="this.globals.user == 'professor'">
-        <a class="AssignmentTeaser-title">[Assignment Title]</a>
+        <a class="AssignmentTeaser-title">{{ title }}</a>
         <p class="AssignmentTeaser-averageGrade">[Average Grade]</p>
         <p class="AssignmentTeaser-gradeDist">[Grade Distribution]</p>
         <a class="AssignmentTeaser-modify">Modify</a>
