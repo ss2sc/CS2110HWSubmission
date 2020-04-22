@@ -11,7 +11,8 @@ import { GlobalsService } from './common/services/globals.service';
 import { AssignmentTeaserComponent } from './assignment-teaser/assignment-teaser.component';
 import { CourseTeaserComponent } from './course-teaser/course-teaser.component';
 import { CreateAssignmentComponent } from './create-assignment/create-assignment.component';
-import { ModifyAssignmentComponent } from './modify-assignment/modify-assignment.component'
+import { ModifyAssignmentComponent } from './modify-assignment/modify-assignment.component';
+import { AssignmentComponent } from './assignment/assignment.component'
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { ModifyAssignmentComponent } from './modify-assignment/modify-assignment
     AssignmentTeaserComponent,
     CourseTeaserComponent,
     CreateAssignmentComponent,
-    ModifyAssignmentComponent
+    ModifyAssignmentComponent,
+    AssignmentComponent
   ],
   imports: [
     BrowserModule,

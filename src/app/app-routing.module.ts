@@ -4,13 +4,15 @@ import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { CreateAssignmentComponent } from './create-assignment/create-assignment.component';
 import { ModifyAssignmentComponent } from './modify-assignment/modify-assignment.component';
+import { AssignmentComponent } from './assignment/assignment.component';
 
 
 const routes: Routes = [
-  {path: '', component: LoginComponent},
-  {path: 'home', component: HomeComponent},
-  {path: 'createAssignment', component: CreateAssignmentComponent},
-  {path: 'modifyAssignment', component: ModifyAssignmentComponent}
+  {path: '', component: LoginComponent, pathMatch: 'full'},
+  {path: 'home', component: HomeComponent, pathMatch: 'full'},
+  {path: 'createAssignment', component: CreateAssignmentComponent, pathMatch: 'full'},
+  {path: 'modifyAssignment/:id', component: ModifyAssignmentComponent},
+  {path: 'assignment/:id', component: AssignmentComponent}
 ];
 
 @NgModule({

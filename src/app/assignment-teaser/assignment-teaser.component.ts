@@ -9,11 +9,7 @@ import { GlobalsService } from '../common/services/globals.service'
 export class AssignmentTeaserComponent implements OnInit {
 
   @Input()
-  title : string;
-  @Input()
-  description : string;
-  @Input()
-  grade : string;
+  assignment : any;
 
   constructor(private globals: GlobalsService) { }
 

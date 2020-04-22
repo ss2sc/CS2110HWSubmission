@@ -22,13 +22,15 @@
                     "title": "Homework 1: CodingBat",
                     "description": "Get used to Java with CodingBat!",
                     "grade": 0,
-                    "dueDate": "2019-10-01"
+                    "dueDate": "2019-10-01",
+                    "assignmentID": 0
                 },
                 {
                     "title": "Homework 2: Instagram?",
                     "description": "Start building your new startup product!",
                     "grade": 0,
-                    "dueDate": "2019-10-28"
+                    "dueDate": "2019-10-28",
+                    "assignmentID": 1
                 }
             ]
         },
@@ -40,13 +42,15 @@
                     "title": "Homework 1: CodingBat",
                     "description": "Get used to Java with CodingBat!",
                     "grade": 0,
-                    "dueDate": "2020-04-01"
+                    "dueDate": "2020-04-01",
+                    "assignmentID": 2
                 },
                 {
                     "title": "Homework 2: Instagram?",
                     "description": "Start building your new startup product!",
                     "grade": 0,
-                    "dueDate": "2020-04-28"
+                    "dueDate": "2020-04-28",
+                    "assignmentID": 3
                 }
             ]
         }
