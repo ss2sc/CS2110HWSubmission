@@ -5,6 +5,6 @@ import { Injectable } from '@angular/core';
 })
 export class GlobalsService {
 
-  user: string = "";
+  user: any;
   constructor() { }
 }

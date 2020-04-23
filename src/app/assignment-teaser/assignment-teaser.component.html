@@ -1,20 +1,20 @@
 <div class="AssignmentTeaser">
     <!-- Student Experience -->
-    <div class="AssignmentTeaser--student" *ngIf="this.globals.user == 'student'">
+    <div class="AssignmentTeaser--student" *ngIf="this.globals.user.role == 'student'">
         <a class="AssignmentTeaser-title" [routerLink]="['/submitAssignment', assignment.assignmentID]">{{ assignment.title }}</a>
         <p class="AssignmentTeaser-description">{{ assignment.description }}</p>
         <p class="AssignmentTeaser-grade">Grade: {{ assignment.grade }}</p>
     </div>
 
     <!-- Instructor Experience -->
-    <div class="AssignmentTeaser--instructor" *ngIf="this.globals.user == 'instructor'">
+    <div class="AssignmentTeaser--instructor" *ngIf="this.globals.user.role == 'instructor'">
         <a class="AssignmentTeaser-title">{{ assignment.title }}</a>
         <p class="AssignmentTeaser-averageGrade">[Average Grade]</p>
         <p class="AssignmentTeaser-gradeDist">[Grade Distribution]</p>
     </div>
 
     <!-- Professor Experience -->
-    <div class="AssignmentTeaser--instructor" *ngIf="this.globals.user == 'professor'">
+    <div class="AssignmentTeaser--instructor" *ngIf="this.globals.user.role == 'professor'">
         <a class="AssignmentTeaser-title">{{ assignment.title }}</a>
         <p class="AssignmentTeaser-averageGrade">[Average Grade]</p>
         <p class="AssignmentTeaser-gradeDist">[Grade Distribution]</p>

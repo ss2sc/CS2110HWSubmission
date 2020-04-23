@@ -1,6 +1,6 @@
 <div class="Home">
     <!-- Student Experience -->
-    <div *ngIf="this.globals.user == 'student'">
+    <div *ngIf="this.globals.user.role == 'student'">
         <h1 class="Home-title">Welcome {{ name }} to [Course]</h1>
         <h3 class="Home-grade">Your Current Homework Grade is: [Grade]</h3>
         <div class="Home-openAssignments">
@@ -18,7 +18,7 @@
     </div>
     
     <!-- Instructor Experience -->
-    <div *ngIf="this.globals.user == 'instructor'">
+    <div *ngIf="this.globals.user.role == 'instructor'">
         <h1 class="Home-title">Welcome {{ name }}</h1>
         <div class="Home-courses" *ngFor="let course of courses">
             <a class="Home-courses-title">{{ course.courseTitle }} {{ course.semester }}</a>
@@ -38,7 +38,7 @@
     </div>
 
     <!-- Professor Experience -->
-    <div *ngIf="this.globals.user == 'professor'">
+    <div *ngIf="this.globals.user.role == 'professor'">
         <h1 class="Home-title">Welcome {{ name }}</h1>
         <div class="Home-courses" *ngFor="let course of courses">
             <a class="Home-courses-title">{{ course.courseTitle }} {{ course.semester }}</a>

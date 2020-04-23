@@ -14,7 +14,7 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
   }
 
-  login(userType: string) {
-    this.globals.user = userType;
+  login(user: number) {
+    this.globals.user = DummyData.users[user];
   }
 }
