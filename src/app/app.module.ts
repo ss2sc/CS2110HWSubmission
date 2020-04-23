@@ -12,7 +12,7 @@ import { AssignmentTeaserComponent } from './assignment-teaser/assignment-teaser
 import { CourseTeaserComponent } from './course-teaser/course-teaser.component';
 import { CreateAssignmentComponent } from './create-assignment/create-assignment.component';
 import { ModifyAssignmentComponent } from './modify-assignment/modify-assignment.component';
-import { AssignmentComponent } from './assignment/assignment.component'
+import { SubmitAssignmentComponent } from './submit-assignment/submit-assignment.component'
 
 @NgModule({
   declarations: [
@@ -25,7 +25,7 @@ import { AssignmentComponent } from './assignment/assignment.component'
     CourseTeaserComponent,
     CreateAssignmentComponent,
     ModifyAssignmentComponent,
-    AssignmentComponent
+    SubmitAssignmentComponent
   ],
   imports: [
     BrowserModule,

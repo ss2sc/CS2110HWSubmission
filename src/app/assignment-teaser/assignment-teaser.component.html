@@ -1,7 +1,7 @@
 <div class="AssignmentTeaser">
     <!-- Student Experience -->
     <div class="AssignmentTeaser--student" *ngIf="this.globals.user == 'student'">
-        <a class="AssignmentTeaser-title" [routerLink]="['/assignment', assignment.assignmentID]">{{ assignment.title }}</a>
+        <a class="AssignmentTeaser-title" [routerLink]="['/submitAssignment', assignment.assignmentID]">{{ assignment.title }}</a>
         <p class="AssignmentTeaser-description">{{ assignment.description }}</p>
         <p class="AssignmentTeaser-grade">Grade: {{ assignment.grade }}</p>
     </div>
@@ -18,6 +18,6 @@
         <a class="AssignmentTeaser-title">{{ assignment.title }}</a>
         <p class="AssignmentTeaser-averageGrade">[Average Grade]</p>
         <p class="AssignmentTeaser-gradeDist">[Grade Distribution]</p>
-        <a class="AssignmentTeaser-modify" href="modifyAssignment/{{ assignment.assignmentID }}">Modify</a>
+        <a class="AssignmentTeaser-modify" [routerLink]="['/modifyAssignment', assignment.assignmentID]">Modify</a>
     </div>
 </div>
