@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { GlobalsService } from '../common/services/globals.service';
 
 @Component({
   selector: 'app-submit-assignment',
@@ -9,9 +11,11 @@ export class SubmitAssignmentComponent implements OnInit {
 
   assignment: any;
 
-  constructor() { }
+  constructor(private globals: GlobalsService, private route: ActivatedRoute) { }
 
   ngOnInit() {
+    this.route.paramMap.subscribe(params => {
+      this.assignment = this.globals.getAssignment(Number(params.get('id')));
+    });
   }
-
 }
