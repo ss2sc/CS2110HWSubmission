@@ -33,7 +33,12 @@
         <h1 class="Home-title">Welcome {{ name }}</h1>
         <div class="Home-courses" *ngFor="let course of courses.slice().reverse()">
             <div class="Home-courses-title">
-                <p>{{ course.courseTitle }} {{ course.semester }}</p>
+                <a class="Home-courses-name">{{ course.courseTitle }} {{ course.semester }}</a>
+                <div>
+                    <a class="btn btn-primary" href="/createAssignment">Create New Assignment</a>
+                    &nbsp;
+                    <a class="btn btn-primary" href="/instructors">Instructor List</a>
+                </div>
             </div>
             <assignment-teaser *ngFor="let assignment of pastAssignments(course.assignments).slice().reverse()"
                 [assignment]="assignment">

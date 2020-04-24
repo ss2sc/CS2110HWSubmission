@@ -19,9 +19,16 @@
         margin: 0 16px;
 
         &-title {
-            display: block;
+            margin: 0;
+            display: flex;
+            justify-content: space-between;
             background-color: rgb(180, 180, 180);
             padding: 8px 16px;
+        }
+
+        &-name {
+            font-weight: bold;
+            padding: 0.375rem 0.75rem;
         }
     }
 }
