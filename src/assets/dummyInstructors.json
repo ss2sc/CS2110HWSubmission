@@ -1,0 +1,47 @@
+{
+    "version": 1,
+    "instructors": [
+        {
+            "Name": "Nada Basit",
+            "Computing ID": "nb3f",
+            "Role": "Professor"
+        },
+        {
+            "Name": "Will McBurney",
+            "Computing ID": "pm8fc",
+            "Role": "Professor"
+        },
+        {
+            "Name": "Derrick Stone",
+            "Computing ID": "djs6d",
+            "Role": "Professor"
+        },
+        {
+            "Name": "Panagiotic Apostolellis",
+            "Computing ID": "pa7xu",
+            "Role": "Professor"
+        },
+        {
+            "Name": "Kenneth Chen",
+            "Computing ID": "kc5by",
+            "Grading Hours": 2,
+            "Role": "Teaching Assistant"
+        },
+        {
+            "Name": "Stephen Shiao",
+            "Computing ID": "ss2sc",
+            "Grading Hours": 1,
+            "Role": "Teaching Assistant"
+        },
+        {
+            "Name": "CJ Rogers",
+            "Computing ID": "cjr2cu",
+            "Role": "Teaching Assistant"
+        },
+        {
+            "Name": "Kevin Li",
+            "Computing ID": "kl7ck",
+            "Role": "Teaching Assistant"
+        }
+    ]
+}
