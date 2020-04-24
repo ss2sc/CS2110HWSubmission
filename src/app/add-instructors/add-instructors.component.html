@@ -1,0 +1,78 @@
+<div class="Instructors">
+    <div class="Instructors-title">
+        <h1>Instructors</h1>
+    </div>
+    <div class="Instructors-upload">
+        <h5 class="Instructors-header">Upload CSV File</h5>
+        <input type="file">
+    </div>
+    <div class="Instructors-manualAdd">
+        <h5 class="Instructors-header">Add Manually</h5>
+        <form>
+            <table id="AddInstructorTable" class="Table">
+                <tr class="Table-headerRow">
+                    <th class="Table-header">Name</th>
+                    <th class="Table-header">Computing ID</th>
+                    <th class="Table-header">Grading Hours</th>
+                    <th class="Table-header">Role</th>
+                </tr>
+                <tr>
+                    <th>
+                        <input type="text" id="name1" placeholder="Name">
+                    </th>
+                    <th>
+                        <input type="text" id="computingId1" placeholder="Computing Id">
+                    </th>
+                    <th>
+                        <input type="number" id="hours1" value=0>
+                    </th>
+                    <th>
+                        <select id="role1">
+                            <option value="Professor">Professor</option>
+                            <option value="Teaching Assistant">TA</option>
+                        </select>
+                    </th>
+                </tr>
+            </table>
+            <button type="button" class="Button-addRow" (click)="addInstructor()">+ Add Another Instructor</button>
+            <button type="submit" class="btn btn-primary">Add Instructors</button>
+        </form>
+    </div>
+    <div class="Instructors-list">
+        <h5 class="Instructors-header">Instructor List</h5>
+        <mat-form-field>
+            <mat-label>Search by Name or Computing Id</mat-label>
+            <input matInput (keyup)="applyFilter($event)">
+        </mat-form-field>
+
+        <table mat-table [dataSource]="instructorData" matSort class="mat-elevation-z8">
+
+            <!-- Position Column -->
+            <ng-container matColumnDef="name">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>
+              <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+            </ng-container>
+          
+            <!-- Name Column -->
+            <ng-container matColumnDef="computingId">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> Computing ID </th>
+              <td mat-cell *matCellDef="let element"> {{element.computingId}} </td>
+            </ng-container>
+          
+            <!-- Weight Column -->
+            <ng-container matColumnDef="gradingHours">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> Grading Hours </th>
+              <td mat-cell *matCellDef="let element"> {{element.gradingHours}} </td>
+            </ng-container>
+          
+            <!-- Symbol Column -->
+            <ng-container matColumnDef="role">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> Role </th>
+              <td mat-cell *matCellDef="let element"> {{element.role}} </td>
+            </ng-container>
+          
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+          </table>
+    </div>
+</div>
