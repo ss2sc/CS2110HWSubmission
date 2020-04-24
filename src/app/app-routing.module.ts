@@ -11,9 +11,8 @@ import { SubmitAssignmentComponent } from './submit-assignment/submit-assignment
 const routes: Routes = [
   {path: '', component: LoginComponent},
   {path: 'home', component: HomeComponent},
-  {path: 'createAssignment', component: CreateAssignmentComponent},
-  {path: 'modifyAssignment', component: ModifyAssignmentComponent},
   {path: 'instructors', component: AddInstructorsComponent},
+  {path: 'createAssignment', component: CreateAssignmentComponent},
   {path: 'modifyAssignment/:id', component: ModifyAssignmentComponent},
   {path: 'submitAssignment/:id', component: SubmitAssignmentComponent}
 ];

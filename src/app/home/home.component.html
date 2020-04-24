@@ -5,7 +5,7 @@
         <h3 class="Home-grade">Your Current Homework Grade is: [Grade]</h3>
         <div class="Home-openAssignments">
             <p class="Home-subtitle">Open Assignments</p>
-            <assignment-teaser *ngFor="let assignment of pastAssignments(courses[1].assignments).slice().reverse()"
+            <assignment-teaser *ngFor="let assignment of currentAssignments(courses[1].assignments).slice().reverse()"
                 [assignment]="assignment">
             </assignment-teaser>
         </div>
@@ -17,8 +17,8 @@
         </div>
     </div>
     
-    <!-- Instructor Experience -->
-    <div *ngIf="this.globals.user.role == 'instructor'">
+    <!-- TA Experience -->
+    <div *ngIf="this.globals.user.role == 'teaching assistant'">
         <h1 class="Home-title">Welcome {{ name }}</h1>
         <div class="Home-courses" *ngFor="let course of courses">
             <a class="Home-courses-title">{{ course.courseTitle }} {{ course.semester }}</a>
@@ -32,7 +32,9 @@
     <div *ngIf="this.globals.user.role == 'professor'">
         <h1 class="Home-title">Welcome {{ name }}</h1>
         <div class="Home-courses" *ngFor="let course of courses.slice().reverse()">
-            <a class="Home-courses-title">{{ course.courseTitle }} {{ course.semester }}</a>
+            <div class="Home-courses-title">
+                <p>{{ course.courseTitle }} {{ course.semester }}</p>
+            </div>
             <assignment-teaser *ngFor="let assignment of pastAssignments(course.assignments).slice().reverse()"
                 [assignment]="assignment">
             </assignment-teaser>
