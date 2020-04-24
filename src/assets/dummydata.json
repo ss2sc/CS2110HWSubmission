@@ -1,33 +1,82 @@
 {
-    "version": 1,
-    "users": {
-        "professor": {
+    "users": [
+        {
+            "role": "professor",
             "firstName": "the",
             "lastName": "professor"
         },
-        "instructor": {
+        {
+            "role": "instructor",
             "firstName": "teaching",
             "lastName": "boi"
         },
-        "student": {
+        {
+            "role": "student",
             "firstName": "learning",
-            "lastName": "boi"
+            "lastName": "boi",
+            "grades": [
+                {
+                    "assignmentID": 2,
+                    "grade": 90
+                },
+                {
+                    "assignmentID": 3,
+                    "grade": 100
+                }
+            ]
+        },
+        {
+            "role": "student",
+            "firstName": "learning",
+            "lastName": "boi2",
+            "grades": [
+                {
+                    "assignmentID": 2,
+                    "grade": 100
+                },
+                {
+                    "assignmentID": 3,
+                    "grade": 90
+                }
+            ]
         }
-    },
-    "classes": {
-        "cs2110": {
-            "assignments": {
-                "HW1": {
+    ],
+    "courses": [
+        {
+            "courseTitle": "CS2110",
+            "semester": "Fall 2019",
+            "assignments": [
+                {
                     "title": "Homework 1: CodingBat",
                     "description": "Get used to Java with CodingBat!",
-                    "grade": 0
+                    "dueDate": "2019-10-01",
+                    "assignmentID": 0
                 },
-                "HW2": {
-                    "title": "Instagram?",
+                {
+                    "title": "Homework 2: Instagram?",
                     "description": "Start building your new startup product!",
-                    "grade": 0
+                    "dueDate": "2019-10-28",
+                    "assignmentID": 1
                 }
-            }
+            ]
+        },
+        {
+            "courseTitle": "CS2110",
+            "semester": "Spring 2020",
+            "assignments": [
+                {
+                    "title": "Homework 1: CodingBat",
+                    "description": "Get used to Java with CodingBat!",
+                    "dueDate": "2020-04-01",
+                    "assignmentID": 2
+                },
+                {
+                    "title": "Homework 2: Instagram?",
+                    "description": "Start building your new startup product!",
+                    "dueDate": "2020-04-28",
+                    "assignmentID": 3
+                }
+            ]
         }
-    }
+    ]
 }

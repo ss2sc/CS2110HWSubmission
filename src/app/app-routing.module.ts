@@ -5,6 +5,7 @@ import { HomeComponent } from './home/home.component';
 import { CreateAssignmentComponent } from './create-assignment/create-assignment.component';
 import { ModifyAssignmentComponent } from './modify-assignment/modify-assignment.component';
 import { AddInstructorsComponent } from './add-instructors/add-instructors.component';
+import { SubmitAssignmentComponent } from './submit-assignment/submit-assignment.component';
 
 
 const routes: Routes = [
@@ -13,6 +14,8 @@ const routes: Routes = [
   {path: 'createAssignment', component: CreateAssignmentComponent},
   {path: 'modifyAssignment', component: ModifyAssignmentComponent},
   {path: 'instructors', component: AddInstructorsComponent},
+  {path: 'modifyAssignment/:id', component: ModifyAssignmentComponent},
+  {path: 'submitAssignment/:id', component: SubmitAssignmentComponent}
 ];
 
 @NgModule({

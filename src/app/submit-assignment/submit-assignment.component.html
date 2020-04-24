@@ -1,0 +1,32 @@
+<div class="CreateAssign">
+    <div class="CreateAssign-title">
+        <h1>Submit Assignment</h1>
+    </div>
+    <form>
+        <div class="form-group CreateAssign-formGroup">
+            <label for="assignmentName">Assignment Title</label>
+            <p><b>{{ assignment.title }}</b></p>
+        </div>
+        <div class="form-group CreateAssign-formGroup">
+            <label for="directions">Directions</label>
+            <p>{{ assignment.description }}</p>
+        </div>
+        <div class="form-group CreateAssign-formGroup">
+            <label for="dueDate">Due Date</label>
+            <p>{{ assignment.dueDate }}</p>
+        </div>
+
+        <div class="collapsible">Past Submissions<span class="down-caret"></span></div>
+        <div class="content">
+            <!-- TODO: Add previous submission stuff here-->
+            hehe nothing here
+        </div>
+        
+        <div class="form-group CreateAssign-formGroup">
+            <label for="files">Upload Assignment Files</label>
+            <input type="file" class="form-control CreateAssign-input CreateAssign-fileUpload" id="files">
+        </div>
+        
+        <button type="submit" class="btn btn-primary">Submit Assignment</button>
+    </form>
+</div>

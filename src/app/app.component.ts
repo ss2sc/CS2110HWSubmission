@@ -10,6 +10,5 @@ export class AppComponent {
   title = 'CS2110HWSubmission';
   
   constructor() {
-    console.log(DummyData);
   }
 }

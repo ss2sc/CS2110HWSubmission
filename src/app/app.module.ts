@@ -21,6 +21,7 @@ import { CreateAssignmentComponent } from './create-assignment/create-assignment
 import { ModifyAssignmentComponent } from './modify-assignment/modify-assignment.component';
 import { AddInstructorsComponent } from './add-instructors/add-instructors.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import { SubmitAssignmentComponent } from './submit-assignment/submit-assignment.component'
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
     CourseTeaserComponent,
     CreateAssignmentComponent,
     ModifyAssignmentComponent,
-    AddInstructorsComponent
+    AddInstructorsComponent,
+    SubmitAssignmentComponent
   ],
   imports: [
     BrowserModule,
