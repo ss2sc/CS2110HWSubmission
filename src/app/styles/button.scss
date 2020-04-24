@@ -1,0 +1,11 @@
+.Button {
+    &-addRow {
+        display: block;
+        margin: 16px;
+
+        border: none;
+        background-color: white;
+        color: blue;
+        text-decoration: underline;
+    }
+}

@@ -1,5 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { MatSliderModule } from '@angular/material/slider';
+
+import '../polyfills';
+
+import {HttpClientModule} from '@angular/common/http';
+import {MatNativeDateModule} from '@angular/material/core';
+import {DemoMaterialModule} from './material-module';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,7 +18,9 @@ import { GlobalsService } from './common/services/globals.service';
 import { AssignmentTeaserComponent } from './assignment-teaser/assignment-teaser.component';
 import { CourseTeaserComponent } from './course-teaser/course-teaser.component';
 import { CreateAssignmentComponent } from './create-assignment/create-assignment.component';
-import { ModifyAssignmentComponent } from './modify-assignment/modify-assignment.component'
+import { ModifyAssignmentComponent } from './modify-assignment/modify-assignment.component';
+import { AddInstructorsComponent } from './add-instructors/add-instructors.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 
 @NgModule({
   declarations: [
@@ -23,11 +32,17 @@ import { ModifyAssignmentComponent } from './modify-assignment/modify-assignment
     AssignmentTeaserComponent,
     CourseTeaserComponent,
     CreateAssignmentComponent,
-    ModifyAssignmentComponent
+    ModifyAssignmentComponent,
+    AddInstructorsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    BrowserAnimationsModule,
+    MatSliderModule,
+    HttpClientModule,
+    MatNativeDateModule,
+    DemoMaterialModule,
   ],
   providers: [GlobalsService],
   bootstrap: [AppComponent]

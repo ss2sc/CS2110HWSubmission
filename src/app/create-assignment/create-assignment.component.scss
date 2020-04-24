@@ -1,3 +1,5 @@
+@import "../styles/button.scss";
+
 .CreateAssign {
     margin: 32px;
 
@@ -28,14 +30,6 @@
 
     &-list {
         margin-bottom: 16px;
-    }
-
-    &-addGroup {
-        padding: 0;
-        color: blue;
-        text-decoration: underline;
-        border: none;
-        background-color: white;
     }
 
     &-fileUpload {

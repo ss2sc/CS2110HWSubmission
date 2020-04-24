@@ -1,0 +1,32 @@
+@import "../styles/button.scss";
+
+.Instructors {
+
+    margin: 32px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &-title,
+    &-upload,
+    &-manualAdd {
+        margin-bottom: 16px;
+    }
+
+    &-header {
+        text-align: center;
+    }
+
+    &-list {
+        width: 50%;
+
+        table {
+            width: 100%;
+        }
+    }
+}
+
+mat-form-field {
+    width: 50%;
+}
