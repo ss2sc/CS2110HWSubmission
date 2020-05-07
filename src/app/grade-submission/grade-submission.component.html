@@ -1,0 +1,28 @@
+<div class="GradeSubmission">
+    <div class="GradeSubmission-title">
+        <h1>Grade Submission</h1>
+        <h2>[Assignment Name] - [Student Name]</h2>
+    </div>
+    <form>
+        <div class="form-group GradeSubmission-rubric">
+            <h2>Rubric</h2>
+        </div>
+        <div class="form-group GradeSubmission-rubric">
+            <h2>Comments</h2>
+        </div>
+    </form>
+    <div class="GradeSubmission-previewCode">
+        <h2>Code View</h2>
+        <label for="input-files">Preview Files Testing</label>
+        <input type="file" class="form-control" id="input-files" accept=".java,.zip,.txt" (change)="loadFiles($event)">
+        <ace-editor #editor 
+            [text]="files[0].content"
+            [mode]="'java'" 
+            [readOnly]="true" 
+            style="min-height: 200px; width:100%; overflow: auto;">hello</ace-editor>
+    </div>
+    <div class="GradeSubmission-submitForStudent">
+        <label for="files">Submit for student</label>
+        <input type="file" class="form-control" id="files">
+    </div>
+</div>

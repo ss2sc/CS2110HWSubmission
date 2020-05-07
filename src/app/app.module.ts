@@ -21,7 +21,9 @@ import { CreateAssignmentComponent } from './create-assignment/create-assignment
 import { ModifyAssignmentComponent } from './modify-assignment/modify-assignment.component';
 import { AddInstructorsComponent } from './add-instructors/add-instructors.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
-import { SubmitAssignmentComponent } from './submit-assignment/submit-assignment.component'
+import { SubmitAssignmentComponent } from './submit-assignment/submit-assignment.component';
+import { GradeSubmissionComponent } from './grade-submission/grade-submission.component'
+import { AceEditorModule } from 'ng2-ace-editor';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,8 @@ import { SubmitAssignmentComponent } from './submit-assignment/submit-assignment
     CreateAssignmentComponent,
     ModifyAssignmentComponent,
     AddInstructorsComponent,
-    SubmitAssignmentComponent
+    SubmitAssignmentComponent,
+    GradeSubmissionComponent
   ],
   imports: [
     BrowserModule,
@@ -45,6 +48,7 @@ import { SubmitAssignmentComponent } from './submit-assignment/submit-assignment
     HttpClientModule,
     MatNativeDateModule,
     DemoMaterialModule,
+    AceEditorModule,
   ],
   providers: [GlobalsService],
   bootstrap: [AppComponent]

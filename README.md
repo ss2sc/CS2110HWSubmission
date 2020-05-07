@@ -31,6 +31,9 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 # Dependencies that need to be installed
 Bootstrap: `npm install bootstrap`
 Angular Materials: `ng add @angular/material` (https://material.angular.io/guide/getting-started) 
+Reading zip files: `npm install jszip`
+Built in code editor: `npm install ng2-ace-editor`
+Ace dependencies: `npm install brace`
 
 ## Future Work
 Due to the transition to online classes, an actual web server was not able to be obtained with cshelpdesk being busy. Thus, we were not able to use cookies or integrate netbadge login - currently the "user" is implemented with a global variable (will want to change this on backend implementation)
