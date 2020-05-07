@@ -6,6 +6,7 @@ import { CreateAssignmentComponent } from './create-assignment/create-assignment
 import { ModifyAssignmentComponent } from './modify-assignment/modify-assignment.component';
 import { AddInstructorsComponent } from './add-instructors/add-instructors.component';
 import { SubmitAssignmentComponent } from './submit-assignment/submit-assignment.component';
+import { GradeSubmissionListComponent } from './grade-submission-list/grade-submission-list.component';
 
 
 const routes: Routes = [
@@ -14,7 +15,8 @@ const routes: Routes = [
   {path: 'instructors', component: AddInstructorsComponent},
   {path: 'createAssignment', component: CreateAssignmentComponent},
   {path: 'modifyAssignment/:id', component: ModifyAssignmentComponent},
-  {path: 'submitAssignment/:id', component: SubmitAssignmentComponent}
+  {path: 'submitAssignment/:id', component: SubmitAssignmentComponent},
+  {path: 'viewSubmissions', component: GradeSubmissionListComponent},
 ];
 
 @NgModule({

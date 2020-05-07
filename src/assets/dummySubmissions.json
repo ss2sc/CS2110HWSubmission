@@ -1,0 +1,35 @@
+{
+    "assignmentName": "Homework 3",
+    "submissions": [
+        {
+            "name": "Kenneth Chen",
+            "computingId": "kc5by",
+            "numSubmissions": 3,
+            "score": 100
+        },
+        {
+            "name": "Stephen Shiao",
+            "computingId": "ss2sc",
+            "numSubmissions": 7,
+            "score": 95
+        },
+        {
+            "name": "CJ Rogers",
+            "computingId": "cjr2cu",
+            "numSubmissions": 6,
+            "score": 88
+        },
+        {
+            "name": "Kevin Li",
+            "computingId": "kl7ck",
+            "numSubmissions": 15,
+            "score": 45
+        },
+        {
+            "name": "Clara Kim",
+            "computingId": "cjk8ad",
+            "numSubmissions": 0,
+            "score": 0
+        }
+    ]
+}

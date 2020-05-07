@@ -21,7 +21,8 @@ import { CreateAssignmentComponent } from './create-assignment/create-assignment
 import { ModifyAssignmentComponent } from './modify-assignment/modify-assignment.component';
 import { AddInstructorsComponent } from './add-instructors/add-instructors.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
-import { SubmitAssignmentComponent } from './submit-assignment/submit-assignment.component'
+import { SubmitAssignmentComponent } from './submit-assignment/submit-assignment.component';
+import { GradeSubmissionListComponent } from './grade-submission-list/grade-submission-list.component'
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { SubmitAssignmentComponent } from './submit-assignment/submit-assignment
     CreateAssignmentComponent,
     ModifyAssignmentComponent,
     AddInstructorsComponent,
-    SubmitAssignmentComponent
+    SubmitAssignmentComponent,
+    GradeSubmissionListComponent
   ],
   imports: [
     BrowserModule,

@@ -47,32 +47,40 @@
 
         <table mat-table [dataSource]="instructorData" matSort class="mat-elevation-z8">
 
-            <!-- Position Column -->
+            <!-- Name Column -->
             <ng-container matColumnDef="name">
               <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>
               <td mat-cell *matCellDef="let element"> {{element.name}} </td>
             </ng-container>
           
-            <!-- Name Column -->
+            <!-- Computing Id Column -->
             <ng-container matColumnDef="computingId">
               <th mat-header-cell *matHeaderCellDef mat-sort-header> Computing ID </th>
               <td mat-cell *matCellDef="let element"> {{element.computingId}} </td>
             </ng-container>
           
-            <!-- Weight Column -->
+            <!-- Grading Hours Column -->
             <ng-container matColumnDef="gradingHours">
               <th mat-header-cell *matHeaderCellDef mat-sort-header> Grading Hours </th>
               <td mat-cell *matCellDef="let element"> {{element.gradingHours}} </td>
             </ng-container>
           
-            <!-- Symbol Column -->
+            <!-- Role Column -->
             <ng-container matColumnDef="role">
               <th mat-header-cell *matHeaderCellDef mat-sort-header> Role </th>
               <td mat-cell *matCellDef="let element"> {{element.role}} </td>
             </ng-container>
+
+            <!-- Button Column -->
+            <ng-container matColumnDef="actions">
+                <th mat-header-cell *matHeaderCellDef> Actions </th>
+                <td mat-cell *matCellDef="let element"> 
+                    <button md-raised-button>Edit/Delete</button>
+                </td>
+            </ng-container>
           
             <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
             <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-          </table>
+        </table>
     </div>
 </div>
