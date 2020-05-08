@@ -4,7 +4,6 @@ import "brace/index";
 import "brace/mode/java";
 import "brace/mode/text";
 import "brace/theme/eclipse";
-import { AceEditorComponent } from 'ng2-ace-editor';
 import AssignmentData from '../../assets/dummyAssignment.json'
 
 @Component({

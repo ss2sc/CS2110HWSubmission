@@ -1,44 +1,49 @@
-<div class="CreateAssign">
-    <div class="CreateAssign-title">
+<div class="GradeSubmission">
+    <div class="GradeSubmission-title">
         <h1>Grade Submission</h1>
     </div>
     <h2>[Assignment Name] - [Student Name]</h2>
     <form>
-        <div class="form-group CreateAssign-formGroup">
-            <h3 for="rubric">Rubric</h3>
-            <div class="CreateAssign-input">
-                <div class="CreateAssign-list" id="CreateAssign-rubric">
-                    <div class="CreateAssign-pointGroup" *ngFor="let item of this.rubric | keyvalue">
-                        <label for="rubricPoints1">Points&nbsp;</label>
-                        <input type="number" class="form-control CreateAssign-pointInput" id="rubricPoints1" value="{{item.value}}">
-                        <label class="form-control" id="description">{{item.key}}</label>
+        <div class="GradeSubmission-formInputs">
+            <div class="form-group GradeSubmission-rubric">
+                <h3 for="rubric">Rubric</h3>
+                <div class="GradeSubmission-input">
+                    <div class="GradeSubmission-list" id="CreateAssign-rubric">
+                        <div class="GradeSubmission-pointGroup" *ngFor="let item of this.rubric | keyvalue; let number=index">
+                            <input type="number" class="form-control GradeSubmission-pointInput" id="rubricPoints{{number}}" value="{{item.value}}" size="4">
+                            <label class="GradeSubmission-pointDescription" id="description{{number}}">/{{item.value}}: {{item.key}}</label>
+                        </div>
                     </div>
                 </div>
             </div>
+            <div class="form-group GradeSubmission-comments">
+                <h3>Comments</h3>
+                <textarea rows="6" class="GradeSubmission-commentField"></textarea>
+                <p class="GradeSubmission-gradedBy">Graded By [TA Name]</p>
+            </div>
         </div>
-        <div class="form-group GradeSubmission-rubric">
-            <h3>Comments</h3>
-            <textarea id="commentField"></textarea>
-        </div>
-        <div id="submitButtons">
-            <button type="submit" class="btn btn-primary">Back to List</button>&nbsp;
-            <button type="submit" class="btn btn-primary">Save and Back to List</button>&nbsp;
+        <div class="GradeSubmission-submitButtons">
+            <button type="submit" class="btn btn-primary">Back to List</button>
+            <button type="submit" class="btn btn-primary">Save and Back to List</button>
             <button type="submit" class="btn btn-primary">Save and Next</button>
         </div>
     </form>
     <div class="GradeSubmission-previewCode">
         <h3>Code View</h3>
         <!-- Accept input files for testing -->
-        <input type="file" class="form-control" id="input-files" accept=".java,.zip,.txt" (change)="loadFiles($event)"><br/>
+        <input type="file" class="form-control GradeSubmission-fileUpload" id="input-files" accept=".java,.zip,.txt" (change)="loadFiles($event)"><br/>
         <button md-raised-button *ngFor="let file of files; let i = index" (click)="setCurrFile(i)">{{ file.filename }}</button>
         <ace-editor #editor 
             [mode]="'java'" 
             [readOnly]="true" 
-            style="min-height: 200px; width:100%; overflow: auto;">hello</ace-editor>
+            style="min-height: 200px; width:100%; overflow: auto;"
+            class="GradeSubmission-codeView">
+            hello
+        </ace-editor>
     </div><br/>
     <div class="GradeSubmission-submitForStudent">
         <h3>Submit for student</h3>
-        <input type="file" class="form-control" id="files"><br/>
+        <input type="file" class="form-control GradeSubmission-fileUpload" id="files"><br/>
         <button type="submit" class="btn btn-primary">Submit</button>
     </div>
 </div>

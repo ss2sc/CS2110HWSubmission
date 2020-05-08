@@ -1,15 +1,59 @@
 @import "../create-assignment/create-assignment.component.scss";
 
-#commentField {
-    width: 100%;
-    height: 150px;
-}
+.GradeSubmission {
+    margin: 32px;
 
-#submitButtons {
-    display: flex;
-    justify-content: center;
-}
+    &-title {
+        text-align: center;
+        margin-bottom: 32px;
+    }
 
-#description {
-    border: 0px;
+    &-pointGroup {
+        display: flex;
+        flex-direction: row;
+    }
+
+    &-pointInput {
+        width: 20%;
+        margin-right: 8px;
+        margin-bottom: 8px;
+    }
+
+    &-pointDescription {
+        padding: 5px;
+    }
+
+    &-formInputs {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    &-comments {
+        width: 40%;
+    }
+
+    &-commentField {
+        width: 100%;
+        height: 75%;
+    }
+
+    &-gradedBy {
+        margin: 8px;
+        text-align: center;
+    }
+
+    &-submitButtons {
+        margin: 32px;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    &-codeView {
+        border: 1px solid;
+    }
+
+    &-fileUpload {
+        border: none;
+    }
 }
