@@ -34,11 +34,11 @@
         <input type="file" class="form-control GradeSubmission-fileUpload" id="input-files" accept=".java,.zip,.txt" (change)="loadFiles($event)"><br/>
         <button md-raised-button *ngFor="let file of files; let i = index" (click)="setCurrFile(i)">{{ file.filename }}</button>
         <ace-editor #editor 
+            [text]="files[0].content"
             [mode]="'java'" 
             [readOnly]="true" 
             style="min-height: 200px; width:100%; overflow: auto;"
             class="GradeSubmission-codeView">
-            hello
         </ace-editor>
     </div><br/>
     <div class="GradeSubmission-submitForStudent">
