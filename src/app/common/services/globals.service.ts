@@ -6,6 +6,7 @@ import DummyData from '../../../assets/dummydata.json'
 })
 export class GlobalsService {
 
+  // TODO: Replacement for cookie/session, replace on backend implementation
   user: any;
   constructor() { }
 

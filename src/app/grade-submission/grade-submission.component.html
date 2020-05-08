@@ -31,6 +31,7 @@
     <div class="GradeSubmission-previewCode">
         <h3>Code View</h3>
         <!-- Accept input files for testing -->
+        <!-- TODO: Change this to a backend implementation, grabbing file from backend instead of from here -->
         <input type="file" class="form-control GradeSubmission-fileUpload" id="input-files" accept=".java,.zip,.txt" (change)="loadFiles($event)"><br/>
         <button md-raised-button *ngFor="let file of files; let i = index" (click)="setCurrFile(i)">{{ file.filename }}</button>
         <ace-editor #editor 

@@ -1,6 +1,31 @@
 # CS2110 HW Submission
 CS2110 Assignment Submission Redesign
 
+## Onboarding the app
+Make sure you have node.js to be able to run npm commands: https://nodejs.org/en/  
+Make sure you have the Angular CLI: `npm install -g @angular/cli` (the -g tag is global and optional as long as you're in the directory of the repo)
+
+Clone the repo onto your local with `git clone https://github.com/ss2sc/CS2110HWSubmission`, this will create a folder of the repo within your current directory.  
+Afterwards, run `npm install` to install the necessary dependencies.  
+Finally, test run the server with `ng serve` and go to `http://localhost:4200/` (Port is 4200 by default, if you changed it please go to the one you changed it to)  
+If a dependency failed, please install packages manually.
+
+### Dependencies
+Bootstrap: `npm install bootstrap`  
+Angular Materials: `ng add @angular/material` (https://material.angular.io/guide/getting-started)  
+Reading zip files: `npm install jszip`  
+Built in code editor: `npm install ng2-ace-editor`  
+Ace dependencies: `npm install brace`  
+
+## Integrating Backend and Writing Code
+The frontend is written with a dummy backend, using .json files. We tried our best to modularize it so that objects just need to be reassigned
+to objects obtained from the backend, and the frontend would still work (but we couldn't test this). Some examples of this are tagged with a 
+"TODO:", so you could search it with your IDE (not all of them may be tagged). Otherwise, look for .json imports and replace the dummy data we 
+used. Additionally, in place of cookies or sessions for users, we used a global service to keep track. This is found in `src\app\common\services\globals.service.ts`
+If you need help writing up additional components or modifying code aside from replacing data, refer to the Angular documentation or the specific library
+to get help.
+
+# Angular Documentation
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.5.
 
 ## Development server
@@ -26,28 +51,3 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
-
-## Writing Angular
-# Dependencies that need to be installed
-Bootstrap: `npm install bootstrap`
-Angular Materials: `ng add @angular/material` (https://material.angular.io/guide/getting-started) 
-Reading zip files: `npm install jszip`
-Built in code editor: `npm install ng2-ace-editor`
-Ace dependencies: `npm install brace`
-
-## Future Work
-Due to the transition to online classes, an actual web server was not able to be obtained with cshelpdesk being busy. Thus, we were not able to use cookies or integrate netbadge login - currently the "user" is implemented with a global variable (will want to change this on backend implementation)
-
-## Integrating JSON
-Currently, every page must import the JSON file using `import DummyData from '../assets/dummydata.json` (may need to add more '../' based on where you are since it's a relative link)
-
-Then, I'm not familiar with how most apps do user persistance so I have a global variable, referred to by this.globals.user by other components, running through so we'll use that to mimic the web database. 
-
-Modify this dummydata.json file as needed.
-
-## TODO
-Routing: Temp routing for now while we just make the pages
-
-ModifyAssignment: Reroute it when buttons are added so we know which assignment to load, instead of currently hardcoded assignment
-
-Mock Backend: Found out how to set up one closer to a database service, could help with backend integration. Do this after front-end is basically done. Information can be found here (along with other routing things): https://www.smashingmagazine.com/2018/11/a-complete-guide-to-routing-in-angular/

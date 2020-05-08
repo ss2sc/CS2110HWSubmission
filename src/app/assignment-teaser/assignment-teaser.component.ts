@@ -8,6 +8,7 @@ import { GlobalsService } from '../common/services/globals.service'
 })
 export class AssignmentTeaserComponent implements OnInit {
 
+  // Takes input from parent (home) in the form of [assignment]="assignment"
   @Input()
   assignment : any;
 

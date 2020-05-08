@@ -9,7 +9,10 @@ import DummyData from '../../assets/dummydata.json';
 })
 export class HomeComponent implements OnInit {
 
+  // TODO: Load in from backend or session, this is part of the cookie/session replacement.
   name: string = this.globals.user.firstName + this.globals.user.lastName;
+
+  // TODO: Load in courses from backend
   courses: any[] = DummyData.courses;
 
   constructor(private globals: GlobalsService) { }
@@ -17,6 +20,7 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
   }
 
+  // Grabs assignments that are done (edit for past late due date as well)
   pastAssignments(assignments: any[]) {
     var a = [];
     var now = new Date();
@@ -29,6 +33,7 @@ export class HomeComponent implements OnInit {
     return a;
   }
 
+  // Grabs assignments that are due soon but not yet done.
   currentAssignments(assignments: any[]) {
     var a = [];
     var now = new Date();
@@ -40,4 +45,6 @@ export class HomeComponent implements OnInit {
     }
     return a;
   }
+
+  // TODO: Add overdue assignments function
 }
