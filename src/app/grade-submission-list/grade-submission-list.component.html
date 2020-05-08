@@ -1,0 +1,52 @@
+<div class="SubmissionList">
+    <h1>Submissions</h1>
+    <div class="SubmissionList-progress" id="progressTable">
+        <h2>Grading Progress</h2>
+    </div>
+
+    <div class="SubmissionList-submissions">
+        <h2>{{ assignment.title }}</h2>
+        <mat-form-field>
+            <mat-label>Search by Name or Computing Id</mat-label>
+            <input matInput (keyup)="applyFilter($event)">
+        </mat-form-field>
+    
+        <table mat-table [dataSource]="submissionData" matSort class="SubmissionList-submissionTable mat-elevation-z8">
+    
+            <!-- Student Name Column -->
+            <ng-container matColumnDef="name">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>
+              <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+            </ng-container>
+          
+            <!-- Student Computing Id Column -->
+            <ng-container matColumnDef="computingId">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> Computing ID </th>
+              <td mat-cell *matCellDef="let element"> {{element.computingId}} </td>
+            </ng-container>
+          
+            <!-- Number of Submissions Column -->
+            <ng-container matColumnDef="numSubmissions">
+              <th mat-header-cell *matHeaderCellDef> Number of Submissions </th>
+              <td mat-cell *matCellDef="let element"> {{element.numSubmissions}} </td>
+            </ng-container>
+          
+            <!-- Grade Column -->
+            <ng-container matColumnDef="score">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> Grade </th>
+              <td mat-cell *matCellDef="let element"> {{element.score}} </td>
+            </ng-container>
+    
+            <!-- Button Column -->
+            <ng-container matColumnDef="actions">
+                <th mat-header-cell *matHeaderCellDef> Actions </th>
+                <td mat-cell *matCellDef="let element"> 
+                    <button md-raised-button [routerLink]="['/gradeSubmission', element.submissionID]">Grade</button>
+                </td>
+            </ng-container>
+          
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+    </div>
+</div>

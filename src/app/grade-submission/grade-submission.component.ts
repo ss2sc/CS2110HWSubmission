@@ -1,10 +1,11 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild, Input } from '@angular/core';
 import JSZip from 'jszip';
 import "brace/index";
 import "brace/mode/java";
 import "brace/mode/text";
 import "brace/theme/eclipse";
 import { AceEditorComponent } from 'ng2-ace-editor';
+import AssignmentData from '../../assets/dummyAssignment.json'
 
 @Component({
   selector: 'app-grade-submission',
@@ -15,6 +16,15 @@ export class GradeSubmissionComponent implements OnInit {
 
   @ViewChild('editor', {static: false}) editor;
   files: any[] = [{filename: "File 1", content: "Placeholder Text"}];
+  currFile: Number = 0;
+
+  title: string = AssignmentData.title;
+  description: string = AssignmentData.description;
+  dueDate: string = AssignmentData["due-date"];
+  maxSubmissions: number = AssignmentData["max-submissions"];
+  rubric: Object = AssignmentData["rubric"];
+  penalties: Object = AssignmentData["late-policy"];
+  hasTests: boolean = AssignmentData["expecting-tests"];
 
   constructor() {
   }
@@ -23,8 +33,13 @@ export class GradeSubmissionComponent implements OnInit {
 
   }
 
+  setCurrFile(index: any) {
+    this.editor.text = this.files[index].content;
+  }
+
   ngAfterViewInit() {
     this.editor.setTheme("eclipse");
+    this.editor.text = this.files[0].content;
   }
 
   loadFiles(event: any) {

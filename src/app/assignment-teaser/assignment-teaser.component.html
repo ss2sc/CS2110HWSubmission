@@ -11,6 +11,7 @@
         <a class="AssignmentTeaser-title">{{ assignment.title }}</a>
         <p class="AssignmentTeaser-averageGrade">[Average Grade]</p>
         <p class="AssignmentTeaser-gradeDist">[Grade Distribution]</p>
+        <button md-raised-button [routerLink]="['/viewSubmissions', assignment.assignmentID]">Grade</button>
     </div>
 
     <!-- Professor Experience -->

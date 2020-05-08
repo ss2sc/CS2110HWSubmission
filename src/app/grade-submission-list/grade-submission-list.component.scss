@@ -1,0 +1,30 @@
+.SubmissionList {
+    margin: 32px;
+
+    &-progress {
+        border: solid;
+        padding: 16px;
+    }
+
+    &-graderProgress {
+        display: flex;
+    }
+
+    &-graderName {
+        width: 10%;
+        margin-right: 16px;
+    }
+
+    &-progressBar {
+        text-align: center;
+        border: solid;
+    }
+
+    &-submissions {
+        margin-top: 32px;
+    }
+
+    &-submissionTable {
+        width: 100%;
+    }
+}

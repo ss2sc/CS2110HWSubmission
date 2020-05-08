@@ -24,6 +24,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { SubmitAssignmentComponent } from './submit-assignment/submit-assignment.component';
 import { GradeSubmissionComponent } from './grade-submission/grade-submission.component'
 import { AceEditorModule } from 'ng2-ace-editor';
+import { GradeSubmissionListComponent } from './grade-submission-list/grade-submission-list.component'
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { AceEditorModule } from 'ng2-ace-editor';
     ModifyAssignmentComponent,
     AddInstructorsComponent,
     SubmitAssignmentComponent,
-    GradeSubmissionComponent
+    GradeSubmissionComponent,
+    GradeSubmissionListComponent
   ],
   imports: [
     BrowserModule,

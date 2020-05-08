@@ -1,28 +1,44 @@
-<div class="GradeSubmission">
-    <div class="GradeSubmission-title">
+<div class="CreateAssign">
+    <div class="CreateAssign-title">
         <h1>Grade Submission</h1>
-        <h2>[Assignment Name] - [Student Name]</h2>
     </div>
+    <h2>[Assignment Name] - [Student Name]</h2>
     <form>
-        <div class="form-group GradeSubmission-rubric">
-            <h2>Rubric</h2>
+        <div class="form-group CreateAssign-formGroup">
+            <h3 for="rubric">Rubric</h3>
+            <div class="CreateAssign-input">
+                <div class="CreateAssign-list" id="CreateAssign-rubric">
+                    <div class="CreateAssign-pointGroup" *ngFor="let item of this.rubric | keyvalue">
+                        <label for="rubricPoints1">Points&nbsp;</label>
+                        <input type="number" class="form-control CreateAssign-pointInput" id="rubricPoints1" value="{{item.value}}">
+                        <label class="form-control" id="description">{{item.key}}</label>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="form-group GradeSubmission-rubric">
-            <h2>Comments</h2>
+            <h3>Comments</h3>
+            <textarea id="commentField"></textarea>
+        </div>
+        <div id="submitButtons">
+            <button type="submit" class="btn btn-primary">Back to List</button>&nbsp;
+            <button type="submit" class="btn btn-primary">Save and Back to List</button>&nbsp;
+            <button type="submit" class="btn btn-primary">Save and Next</button>
         </div>
     </form>
     <div class="GradeSubmission-previewCode">
-        <h2>Code View</h2>
-        <label for="input-files">Preview Files Testing</label>
-        <input type="file" class="form-control" id="input-files" accept=".java,.zip,.txt" (change)="loadFiles($event)">
+        <h3>Code View</h3>
+        <!-- Accept input files for testing -->
+        <input type="file" class="form-control" id="input-files" accept=".java,.zip,.txt" (change)="loadFiles($event)"><br/>
+        <button md-raised-button *ngFor="let file of files; let i = index" (click)="setCurrFile(i)">{{ file.filename }}</button>
         <ace-editor #editor 
-            [text]="files[0].content"
             [mode]="'java'" 
             [readOnly]="true" 
             style="min-height: 200px; width:100%; overflow: auto;">hello</ace-editor>
-    </div>
+    </div><br/>
     <div class="GradeSubmission-submitForStudent">
-        <label for="files">Submit for student</label>
-        <input type="file" class="form-control" id="files">
+        <h3>Submit for student</h3>
+        <input type="file" class="form-control" id="files"><br/>
+        <button type="submit" class="btn btn-primary">Submit</button>
     </div>
 </div>

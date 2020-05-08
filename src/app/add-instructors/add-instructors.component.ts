@@ -23,7 +23,7 @@ export class AddInstructorsComponent implements OnInit {
   addInstructorTable;
 
   instructorData;
-  displayedColumns: string[] = ['name', 'computingId', 'gradingHours', 'role'];
+  displayedColumns: string[] = ['name', 'computingId', 'gradingHours', 'role', 'actions'];
 
   @ViewChild(MatSort, {static: true}) sort: MatSort;
 
