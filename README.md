@@ -13,8 +13,8 @@ If a dependency failed, please install packages manually.
 ### Dependencies
 Bootstrap: `npm install bootstrap`  
 Angular Materials: `ng add @angular/material` (https://material.angular.io/guide/getting-started)  
-Reading zip files: `npm install jszip`  
-Built in code editor: `npm install ng2-ace-editor`  
+Reading zip files: `npm install jszip` (https://stuk.github.io/jszip/)  
+Built in code editor: `npm install ng2-ace-editor` (https://www.npmjs.com/package/ng2-ace-editor)  
 Ace dependencies: `npm install brace`  
 
 ## Integrating Backend and Writing Code
